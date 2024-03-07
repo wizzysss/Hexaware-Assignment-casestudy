@@ -494,5 +494,9 @@ on c.course_id=e.course_id group by c.course_name
 "Students" table and the "Payments" table and GROUP BY to calculate the average.*/
 
 
-select avg(p.amount) as avgerage from Students s join Payments p 
-on s.student_id=p.student_id
+select * from Students
+select * from Payments
+
+select s.student_id, avg(p.amount) AS avg_payment from Payments p join Students s on p.student_id = s.student_id
+group by s.student_id;
+
