@@ -86,3 +86,48 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (3, 3, 3),
 (4, 4, 2); 
 
+
+
+--createProduct()
+
+insert into products (name, price, description, stockQuantity) values ();
+
+
+--createCustomer()
+
+insert into customers (name, email, password) values ();
+
+--deleteProduct()
+
+delete from products where product_id = ;
+
+
+--deleteCustomer(customerId)
+
+delete customers where customer_id = ;
+
+
+--addToCart()
+
+insert into cart (customer_id, product_id, quantity) values ();
+
+
+--removeFromCart()
+
+
+delete from cart where customer_id =  and product_id = ;
+
+
+--getAllFromCart()
+
+select p.product_id, p.name, p.price, p.description, c.quantity FROM cart c join products p 
+on c.product_id = p.product_id where c.customer_id = ;
+
+
+--placeOrder()
+
+
+insert into orders (customer_id, order_date, total_price, shipping_address) values ();
+
+insert into order_items (order_id, product_id, quantity) values ();
+
